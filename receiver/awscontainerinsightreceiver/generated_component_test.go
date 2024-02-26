@@ -58,9 +58,6 @@ func TestComponentLifecycle(t *testing.T) {
 
 		t.Run(test.name+"-lifecycle", func(t *testing.T) {
 
-			// TODO support lifecycle
-			t.SkipNow()
-
 			firstRcvr, err := test.createFn(context.Background(), receivertest.NewNopCreateSettings(), cfg)
 			require.NoError(t, err)
 			host := componenttest.NewNopHost()
